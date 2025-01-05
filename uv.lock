@@ -107,6 +107,19 @@ wheels = [
 ]
 
 [[package]]
+name = "ansible-pylibssh"
+version = "1.2.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/93/50/38298568fbd517dcb7b08c06f4fbfc0481ab9eae1e4b01920495dacf672a/ansible-pylibssh-1.2.2.tar.gz", hash = "sha256:753e570dcdceb6ab8e362e91cc0d5993beebc93d287b88178db55509f6423ab5", size = 135490 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d2/ad/69182877e961c41c8d85fea497de5d99c229cf30c47dcd7bc84362299e1d/ansible_pylibssh-1.2.2-cp312-cp312-macosx_10_9_x86_64.whl", hash = "sha256:9b9684d0dfc557a7c882cbcbdba8cd478d30a4009804d33067900c2956d4ffbd", size = 2294870 },
+    { url = "https://files.pythonhosted.org/packages/a8/06/7dbaabd8910d0acb96da28623cac8f55318089be0d1d6b2397c32f6c73da/ansible_pylibssh-1.2.2-cp312-cp312-manylinux_2_28_aarch64.whl", hash = "sha256:1b78d78a6b1c10404c1d141fc78fc18a2ca5290960ff55a39ef7d2d7a7701d8b", size = 2815358 },
+    { url = "https://files.pythonhosted.org/packages/24/12/b1cf2305890b3569eb476270c42e67c348d10a5ac66e21250f67cad3e927/ansible_pylibssh-1.2.2-cp312-cp312-manylinux_2_28_ppc64le.whl", hash = "sha256:e3ab210a012169339220640e9005188d00195cd8cb35036f2a25471eec65745c", size = 3087410 },
+    { url = "https://files.pythonhosted.org/packages/c5/c1/b92aa0a4adf2e1f542a7587af88a5662949c5fa74791bff79333c9e0d3d8/ansible_pylibssh-1.2.2-cp312-cp312-manylinux_2_28_s390x.whl", hash = "sha256:36674b80d2c0a4c411385dcf9709b96a575bffd54cca81a82aaf572015001146", size = 2804564 },
+    { url = "https://files.pythonhosted.org/packages/5b/9a/e4a7787950df2876ff4e83767f7afd29b4f6f451e1eb2285fea9bdac38fb/ansible_pylibssh-1.2.2-cp312-cp312-manylinux_2_28_x86_64.whl", hash = "sha256:43b2f708af82d57ea3df8d493590720a3dd7dc60a58c65b46eb97d94462be07c", size = 2934402 },
+]
+
+[[package]]
 name = "async-lru"
 version = "2.0.4"
 source = { registry = "https://pypi.org/simple" }
@@ -447,17 +460,34 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "ansible" },
+    { name = "ansible-pylibssh" },
+    { name = "netaddr" },
     { name = "nornir" },
     { name = "pip" },
     { name = "pyats" },
+    { name = "pynetbox" },
+    { name = "pytz" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "ansible", specifier = ">=11.1.0" },
+    { name = "ansible-pylibssh", specifier = ">=1.2.2" },
+    { name = "netaddr", specifier = ">=1.3.0" },
     { name = "nornir", specifier = ">=3.4.1" },
     { name = "pip", specifier = ">=24.3.1" },
     { name = "pyats", specifier = ">=24.11" },
+    { name = "pynetbox", specifier = ">=7.4.1" },
+    { name = "pytz", specifier = ">=2024.2" },
+]
+
+[[package]]
+name = "netaddr"
+version = "1.3.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/54/90/188b2a69654f27b221fba92fda7217778208532c962509e959a9cee5229d/netaddr-1.3.0.tar.gz", hash = "sha256:5c3c3d9895b551b763779ba7db7a03487dc1f8e3b385af819af341ae9ef6e48a", size = 2260504 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/12/cc/f4fe2c7ce68b92cbf5b2d379ca366e1edae38cccaad00f69f529b460c3ef/netaddr-1.3.0-py3-none-any.whl", hash = "sha256:c2c6a8ebe5554ce33b7d5b3a306b71bbb373e000bbbf2350dd5213cc56e3dbbe", size = 2262023 },
 ]
 
 [[package]]
@@ -818,6 +848,19 @@ wheels = [
 ]
 
 [[package]]
+name = "pynetbox"
+version = "7.4.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "packaging" },
+    { name = "requests" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/1a/f9/e6c524e5ddc4c2788ab2f5ee1ab2d9afad49cad9c7cd3a372cf5b8433ed3/pynetbox-7.4.1.tar.gz", hash = "sha256:3f82b5964ca77a608aef6cc2fc48a3961f7667fbbdbb60646655373e3dae00c3", size = 68223 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/f0/4f/fab3934a0dae677e4c23381749ad379c716c6f7fbae5711ebf8fd0cf1bdc/pynetbox-7.4.1-py3-none-any.whl", hash = "sha256:f42ce4df6ce97765df91bb4cc0c0e315683d15135265270d78f595114dd20e2b", size = 35075 },
+]
+
+[[package]]
 name = "python-engineio"
 version = "3.14.2"
 source = { registry = "https://pypi.org/simple" }
@@ -840,6 +883,15 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/6e/6c/b899d7a34503d5e4b6967ee3fec996acee75d0cd087c22963134c88f8ca1/python-socketio-4.6.1.tar.gz", hash = "sha256:cd1f5aa492c1eb2be77838e837a495f117e17f686029ebc03d62c09e33f4fa10", size = 42374 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/b2/91/d78afbe5861de53cafe9dcc6eb1a802d5495cfbffb79b8385ee7cf15a71c/python_socketio-4.6.1-py2.py3-none-any.whl", hash = "sha256:5a21da53fdbdc6bb6c8071f40e13d100e0b279ad997681c2492478e06f370523", size = 51865 },
+]
+
+[[package]]
+name = "pytz"
+version = "2024.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/3a/31/3c70bf7603cc2dca0f19bdc53b4537a797747a58875b552c8c413d963a3f/pytz-2024.2.tar.gz", hash = "sha256:2aa355083c50a0f93fa581709deac0c9ad65cca8a9e9beac660adcbd493c798a", size = 319692 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/11/c3/005fcca25ce078d2cc29fd559379817424e94885510568bc1bc53d7d5846/pytz-2024.2-py2.py3-none-any.whl", hash = "sha256:31c7c1817eb7fae7ca4b8c7ee50c72f93aa2dd863de768e1ef4245d426aa0725", size = 508002 },
 ]
 
 [[package]]
